@@ -1,4 +1,4 @@
-## What is required need to do?
+## What is required?
 
 The objective is to read JSON data containing user login behavior from an AWS SQS Queue that is made available via [localstack](https://github.com/localstack/localstack). Fetch wanted me to hide the personal identifiable information (PII). The fields `device_id` and `ip` should be masked, but in a way where it is easy for data analysts to identify duplicate values in those fields.
 
@@ -117,6 +117,7 @@ select p.* from user_logins_info l cross join lateral json_populate_recordset(nu
 2. Find a way to embed the SQL commands into the python scripts.
 
 ## Tools used
+#
 1. Virtualbox (Ubuntu)
 2. Docker
 3. awslocal/awscli
@@ -127,3 +128,6 @@ select p.* from user_logins_info l cross join lateral json_populate_recordset(nu
 8. VSCode
 
 Comments were left in both the receiveQueue.py and insertion.sql files explaining further what each line of code is doing.
+
+## Thank you
+#
